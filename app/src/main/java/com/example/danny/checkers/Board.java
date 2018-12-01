@@ -189,6 +189,10 @@ public class Board {
             tempX = -1;
             return;
         }
+        if(tempX != -1 && Board.getInstance().table[newX][newY] != "x"){
+            tempX = -1;
+            return;
+        }
         // trapping for NoMan'sLand squares
         if ((newX + newY) % 2 == 0) {
             tempX = -1;
